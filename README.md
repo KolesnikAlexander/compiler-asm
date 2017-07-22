@@ -1,7 +1,7 @@
 # compiler-asm
-Compiler for x86 Assembly that creates a listing file.
-This is done as a coursework on a System Programming subject at KPI. 
-The task is to create a compiler that produces a listing file (.lst). 
+Compiler for x86 Assembly that creates a listing file.<br>
+This is done as a coursework on a System Programming subject at the KPI university.
+The task is to create a compiler that produces a listing file (.lst).<br>
 Listing is a file that presents a machine code generated for assembly commands in human-readable format.
 Compiler supports a small set of the x86 assembly commands.
 
@@ -35,16 +35,16 @@ DB,DW,DD з одним операндом - константою (рядкові
 Префікси заміни сегментів можуть задаватись тільки явно
 
 ###### Машинні команди
-Lahf
-Sub reg, mem
-Mov reg, reg
-Cmp mem,reg
-Adc mem,imm
-Imul reg
-And reg,imm
-Jng
-jmp (міжсегментна пряма та посередня адресація)
-Де reg – 8 або 32-розрядні РЗП
-mem – адреса операнда в пам’яті
-imm - 8 або 32-розрядні безпосередні дані (константи)
+Lahf<br>
+Sub reg, mem<br>
+Mov reg, reg<br>
+Cmp mem,reg<br>
+Adc mem,imm<br>
+Imul reg<br>
+And reg,imm<br>
+Jng<br>
+jmp (міжсегментна пряма та посередня адресація)<br>
+Де reg – 8 або 32-розрядні РЗП<br>
+mem – адреса операнда в пам’яті<br>
+imm - 8 або 32-розрядні безпосередні дані (константи)<br>
 
