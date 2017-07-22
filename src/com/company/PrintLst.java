@@ -1,7 +1,7 @@
 package com.company;
 
-import com.company.main.Line;
-import com.company.main.LinesManager;
+import com.company.program.Line;
+import com.company.program.LinesManager;
 
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;

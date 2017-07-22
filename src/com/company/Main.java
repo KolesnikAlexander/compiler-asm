@@ -1,6 +1,6 @@
 package com.company;
 
-import com.company.main.LinesManager;
+import com.company.program.LinesManager;
 import java.util.Scanner;
 
 public class Main {
