@@ -25,14 +25,20 @@ public class LinesManager {
     public static SegmentTable segmentTable = new SegmentTable();// global segment table
     public static UsrIdTable usrIdTable = new UsrIdTable(); // global user identifiers table
 
-    public static void start(String filePath){
+    /**
+     * Start function
+     * @param filePath
+     * @return true if no problems occurred during execution
+     *         and false otherwise.
+     */
+    public static boolean start(String filePath){
         new RegTable(); //creating a register table
         LineReader reader;
         try {
             reader = new LineReader(filePath);
         } catch (FileNotFoundException e) {
             System.out.println("File not found");
-            return;
+            return false;
         }
         Line curLine;
         try {
@@ -63,8 +69,9 @@ public class LinesManager {
             }
         } catch (IOException e) {
             System.out.println("Cannot read from file");
-            return;
+            return false;
         }
+        return true;
     }
     private static boolean end(Line curLine){
         return KeyWordMatch.isEnd(curLine.getString());
