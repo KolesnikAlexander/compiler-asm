@@ -4,7 +4,6 @@ import com.company.main.LinesManager;
 import java.util.Scanner;
 
 public class Main {
-
     public static void main(String[] args) {
         System.out.println("Assembly translator ");
         System.out.println("Created by Kolesnik Alexander ");
