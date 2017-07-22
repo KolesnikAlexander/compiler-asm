@@ -2,7 +2,7 @@
 Compiler for x86 Assembly that creates a listing file.<br>
 This is done as a coursework on a System Programming subject at the KPI university.
 The task is to create a compiler that produces a listing file (.lst).<br>
-Listing is a file that presents a machine code generated for assembly commands in human-readable format.
+Listing is a file that presents a machine code generated for assembly commands in a human-readable format.
 Compiler supports a small set of the x86 assembly commands.
 
 ## Example
@@ -11,7 +11,7 @@ Compiler supports a small set of the x86 assembly commands.
 #### Result (.lst)
 ![alt result](/materials/img/listing.png)
 ## Task
-The orginal task is to implement the following assembly code (in Ukrainian):
+The orginal task is to implement the following assembly code (next is in Ukrainian):
 
 ###### Ідентифікатори
 Містять великі і малі букви латинского алфавіту та цифри. Починаються з букви. 
