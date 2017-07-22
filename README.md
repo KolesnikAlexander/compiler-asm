@@ -5,6 +5,11 @@ The task is to create a compiler that produces a listing file (.lst).
 Listing is a file that presents a machine code generated for assembly commands in human-readable format.
 Compiler supports a small set of the x86 assembly commands.
 
+## Example
+#### Source code (.asm)
+![alt source](/materials/img/asm.png)
+#### Result (.lst)
+![alt result](/materials/img/listing.png)
 ###The orginal task is to implement the following assembly code (in Ukrainian):
 
 ###### Ідентифікатори
