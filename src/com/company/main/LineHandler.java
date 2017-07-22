@@ -15,6 +15,10 @@ import static com.company.main.check.KeyWords.*;
 
 /**
  * Created by alex6 on 18.05.2017.
+ *
+ * Checks what keywords the line contains and calls functions
+ * from <code>DirHandler</code> class to set the <code>Content</code>
+ * table for the line.
  */
 public class LineHandler {
 
@@ -33,47 +37,32 @@ public class LineHandler {
         str = line.getString();
         curLine.setOffset(commonOffset);
 
-
         if(empty())
             return;
-
-        //line is empty
-        if (line.isEmpty())
+        if (line.isEmpty()) //line is empty
             return;
-
         if (checkSEGMENTAndENDS(line))
             return;
-
         if(checkDefine())
             return;
-
         if (sentence())
             return;
-
         line.assignError();
-
     }
-
     private static boolean sentence() {
         if (curSegment == null)
             return false;
-
         curLine.content = new Content();
-
         if(label())
             return true;
-
         if(expression(str))
             return true;
-
         if(labelExpression())
             return true;
-
         return false;
     }
 
     private static boolean label() {
-
         Pattern usrIdPattern = Pattern.compile("^\\s*("+USR_ID+")\\s*:\\s*$",
                 Pattern.CASE_INSENSITIVE);
         Matcher matcher = usrIdPattern.matcher(str);
@@ -82,7 +71,6 @@ public class LineHandler {
             return DirHandler.labelHandler(curLine, matcher.group(1));
         else
             return false;
-
     }
     private static boolean labelExpression() {
         Pattern usrIdPattern = Pattern.compile("^\\s*("+USR_ID+")\\s*:(.*)$",
@@ -96,7 +84,7 @@ public class LineHandler {
         }
         else
             return false;
-    } //don't forget to do <----------------- !!!!
+    }
 
     private static boolean expression(String possibleExpr) {
         String REGISTERS = REG_8 +"|"+ REG_32;
@@ -106,11 +94,9 @@ public class LineHandler {
         String BASE_INDEX_MULT = "(?:"+POINTERS+")?\\s*(?:"+SEG_CHANGE+")?\\s*"+"\\[\\s*(?:"+REG_32+")\\s*\\+\\s*(?:"+REG_32+")\\s*\\*\\s*[248]"+"\\s*\\]";
         String OPERAND = "(?:"+REGISTERS+")|(?:"+DIRECT_ADDR+")|(?:"+BASE_INDEX_MULT+")|(?:"+CONSTANT+")";
 
-
         String EXPRESSION = "(?:^\\s*("+MNEM +")\\s*$)|" +  // group 1
                 "(?:^\\s*(" + MNEM + ")\\s+(" + OPERAND + ")\\s*$)|"+// groups 2, 3
                 "(?:^\\s*(" + MNEM + ")\\s+(" + OPERAND + ")\\s*,\\s*(" + OPERAND + ")\\s*$)";// groups 4, 5, 6
-
 
         Pattern usrIdPattern = Pattern.compile(""+EXPRESSION+"",
                 Pattern.CASE_INSENSITIVE);
