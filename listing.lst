@@ -1,0 +1,91 @@
+0000                 DAT1 SEGMENT                            
+0000  13             	B1 DB 10011b                           
+0001  0100           	W1 DW 256                              
+0003  6F5A0000       	D1 DD 5A6FH                            
+0007  00080000       	D2 DD 2048                             
+000B  436F7572736520776F726B	B2 DB "Course work"                    
+0016  012C           	W2 DW 300                              
+0018  6F5A0000       	D3 DD 5A6FH                            
+001C  31323335       	B3 DB "1235"                           
+0020  00000000 R     	labf dd lab5                           
+0024  00000052 R     	labb dd lab1                           
+0028                 DAT1 ENDS                               
+
+0000                 COD1 SEGMENT                            
+
+0000  9F             	LAHF                                   
+
+0001  2B 0D 00000003 R	SUB ECX, D1                            
+0007  2A 0D 00000003 R	SUB CL, byte ptr D1                    
+000D  2A 0D 0000000B R	SUB CL, B2                             
+
+0013  8B D3          	MOV EDX, EBX                           
+0015  8A C4          	MOV AL, AH                             
+
+0017  26: 2B 05 00000018 R	SUB EAX,ES:D3                          
+001E  26: 2A 2D 00000018 R	SUB CH, byte ptr ES:D3                 
+
+0025  2B 4475 00     	SUB EAX,[EBP+ESI*2]                    
+0029  3E: 2B 4475 00 	SUB EAX,DS:[EBP+ESI*2]                 
+002E  2B 447D 00     	SUB EAX,SS:[EBP+edi*2]                 
+0032  2A 0473        	SUB AL,DS:[EBX+ESI*2]                  
+0035  36: 2A 047B    	SUB AL,SS:[EBX+edi*2]                  
+0039  36: 2A 045F    	SUB AL,SS:[edi+ebx*2]                  
+
+003D  26: 39 1D 00000003 R	cmp ES:D1, EBX                         
+0044  38 1D 0000000B R	cmp DS:B2, BL                          
+
+004A                 	lab0:                                  
+004A  7E 00          	JNG lab0                               
+004C  0F 8E00000052  	JNG lab1                               
+0052                 	lab1:                                  
+
+0052  83 15 00000007 R 5A	ADC D2, 5AH                            
+0059  83 15 00000018 R 5A	ADC byte ptr D3, 5AH                   
+0060  83 15 00000007 R 5A	ADC dword ptr D2, 5AH                  
+
+0067  F6 E9          	imul cl                                
+0069  F7 E9          	imul ECX                               
+
+006B  25 020F0B01    	AND EAX,020F0B01H                      
+0070  80 E4 06       	AND AH, 6H                             
+
+0073  EA 00000002 ---- R	JMP far ptr lab2                       
+007A                 	lab3:                                  
+007A  FF 25 00000020 R	JMP labf                               
+
+0080                 COD1 ENDS                               
+0000                 COD2 SEGMENT                            
+0000                 	lab5:                                  
+0000  8A C4          	MOV AL, AH                             
+0002                 	lab2:                                  
+0002  EA 0000007A ---- R	JMP far ptr lab3                       
+0009  FF 25 00000024 R	JMP labb                               
+000F                 COD2 ENDS                               
+0000                 END                                     
+
+           SEGMENT TABLE 
+DAT1  ..............   32 Bit   0028  PARA   NONE
+COD1  ..............   32 Bit   0080  PARA   NONE
+COD2  ..............   32 Bit   000F  PARA   NONE
+
+           USER IDENTIFIER TABLE 
+B1    ..............   L BYTE    0000  DAT1
+W1    ..............   L WORD    0001  DAT1
+D1    ..............   L DWORD   0003  DAT1
+D2    ..............   L DWORD   0007  DAT1
+B2    ..............   L BYTE    000B  DAT1
+W2    ..............   L WORD    0016  DAT1
+D3    ..............   L DWORD   0018  DAT1
+B3    ..............   L BYTE    001C  DAT1
+labf  ..............   L DWORD   0020  DAT1
+labb  ..............   L DWORD   0024  DAT1
+lab0  ..............   L NEAR    004A  COD1
+lab1  ..............   L NEAR    0052  COD1
+lab3  ..............   L NEAR    007A  COD1
+lab5  ..............   L NEAR    0000  COD2
+lab2  ..............   L NEAR    0002  COD2
+
+ERRORS: 0
+
+Created by Alexander Kolesnik, group: KV-51, 2017

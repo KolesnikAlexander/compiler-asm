@@ -1,61 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9a2d4a11-9025-4291-9adc-76d0b57f0d6f" name="Default" comment="Second refactor">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DOS-course/DosDrive/Lab5/LAB5.EXE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DOS-course/DosDrive/Lab5/LAB5.LST" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DOS-course/DosDrive/Lab5/LAB5.OBJ" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DOS-course/DosDrive/Lab5/lab5.asm" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DOS-course/DosDrive/Lab6/LAB6.EXE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DOS-course/DosDrive/Lab6/LAB6.LST" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DOS-course/DosDrive/Lab6/LAB6.OBJ" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DOS-course/DosDrive/Lab6/lab6.asm" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/list.lst" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/masmError.asm" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/masmNoError.asm" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/materials/Titulka.docx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/myError.asm" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/myNoError.asm" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/origTest.asm" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/CompilerAsm/com/company/main/content/Lexeme.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/company/main/content/Lexeme.java" afterPath="" />
+    <list default="true" id="9a2d4a11-9025-4291-9adc-76d0b57f0d6f" name="Default" comment="Release">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/listing.lst" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/testFiles/masmError.asm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/testFiles/masmNoError.asm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/testFiles/myError.asm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/testFiles/myNoError.asm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/testFiles/origTest.asm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CompilerAsm/com/company/Main.class" afterPath="$PROJECT_DIR$/out/production/CompilerAsm/com/company/Main.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CompilerAsm/com/company/PrintLst.class" afterPath="$PROJECT_DIR$/out/production/CompilerAsm/com/company/PrintLst.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CompilerAsm/com/company/main/Line.class" afterPath="$PROJECT_DIR$/out/production/CompilerAsm/com/company/main/Line.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CompilerAsm/com/company/main/LineHandler.class" afterPath="$PROJECT_DIR$/out/production/CompilerAsm/com/company/main/LineHandler.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CompilerAsm/com/company/main/LineReader.class" afterPath="$PROJECT_DIR$/out/production/CompilerAsm/com/company/main/LineReader.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CompilerAsm/com/company/main/LinesManager.class" afterPath="$PROJECT_DIR$/out/production/CompilerAsm/com/company/main/LinesManager.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CompilerAsm/com/company/main/check/DirHandler.class" afterPath="$PROJECT_DIR$/out/production/CompilerAsm/com/company/main/check/DirHandler.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CompilerAsm/com/company/main/check/KeyWordMatch.class" afterPath="$PROJECT_DIR$/out/production/CompilerAsm/com/company/main/check/KeyWordMatch.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CompilerAsm/com/company/main/check/KeyWords.class" afterPath="$PROJECT_DIR$/out/production/CompilerAsm/com/company/main/check/KeyWords.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CompilerAsm/com/company/main/content/ContentType.class" afterPath="$PROJECT_DIR$/out/production/CompilerAsm/com/company/main/content/ContentType.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CompilerAsm/com/company/main/content/LexemeOperandBuilder.class" afterPath="$PROJECT_DIR$/out/production/CompilerAsm/com/company/main/content/LexemeOperandBuilder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CompilerAsm/com/company/main/lstGen/OpCodeGenerator$1.class" afterPath="$PROJECT_DIR$/out/production/CompilerAsm/com/company/main/lstGen/OpCodeGenerator$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CompilerAsm/com/company/main/lstGen/OpCodeGenerator.class" afterPath="$PROJECT_DIR$/out/production/CompilerAsm/com/company/main/lstGen/OpCodeGenerator.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CompilerAsm/com/company/main/lstGen/RegTable.class" afterPath="$PROJECT_DIR$/out/production/CompilerAsm/com/company/main/lstGen/RegTable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CompilerAsm/com/company/main/lstGen/Type.class" afterPath="$PROJECT_DIR$/out/production/CompilerAsm/com/company/main/lstGen/Type.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CompilerAsm/com/company/main/segmentTable/Segment.class" afterPath="$PROJECT_DIR$/out/production/CompilerAsm/com/company/main/segmentTable/Segment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CompilerAsm/com/company/main/segmentTable/SegmentTable.class" afterPath="$PROJECT_DIR$/out/production/CompilerAsm/com/company/main/segmentTable/SegmentTable.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/Main.java" afterPath="$PROJECT_DIR$/src/com/company/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/PrintLst.java" afterPath="$PROJECT_DIR$/src/com/company/PrintLst.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/main/Line.java" afterPath="$PROJECT_DIR$/src/com/company/main/Line.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/main/LineHandler.java" afterPath="$PROJECT_DIR$/src/com/company/main/LineHandler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/main/LineReader.java" afterPath="$PROJECT_DIR$/src/com/company/main/LineReader.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/main/LinesManager.java" afterPath="$PROJECT_DIR$/src/com/company/main/LinesManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/main/check/DirHandler.java" afterPath="$PROJECT_DIR$/src/com/company/main/check/DirHandler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/main/check/KeyWordMatch.java" afterPath="$PROJECT_DIR$/src/com/company/main/check/KeyWordMatch.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/main/check/KeyWords.java" afterPath="$PROJECT_DIR$/src/com/company/main/check/KeyWords.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/main/content/Content.java" afterPath="$PROJECT_DIR$/src/com/company/main/content/Content.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/main/content/ContentType.java" afterPath="$PROJECT_DIR$/src/com/company/main/content/ContentType.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/main/content/LexemeOperandBuilder.java" afterPath="$PROJECT_DIR$/src/com/company/main/content/LexemeOperandBuilder.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/main/lstGen/FirstPathProcessor.java" afterPath="$PROJECT_DIR$/src/com/company/main/lstGen/FirstPathProcessor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/main/lstGen/OpCodeGenerator.java" afterPath="$PROJECT_DIR$/src/com/company/main/lstGen/OpCodeGenerator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/main/lstGen/RegTable.java" afterPath="$PROJECT_DIR$/src/com/company/main/lstGen/RegTable.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/main/lstGen/SecondPathProcessor.java" afterPath="$PROJECT_DIR$/src/com/company/main/lstGen/SecondPathProcessor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/main/lstGen/Type.java" afterPath="$PROJECT_DIR$/src/com/company/main/lstGen/Type.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/main/segmentTable/Segment.java" afterPath="$PROJECT_DIR$/src/com/company/main/segmentTable/Segment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/main/segmentTable/SegmentTable.java" afterPath="$PROJECT_DIR$/src/com/company/main/segmentTable/SegmentTable.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/main/semanticAnalyzer/PrimaryFilters.java" afterPath="$PROJECT_DIR$/src/com/company/main/semanticAnalyzer/PrimaryFilters.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -72,11 +29,33 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
           <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="396">
+              <caret line="22" column="69" lean-forward="false" selection-start-line="22" selection-start-column="69" selection-end-line="22" selection-end-column="69" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="myNoError.asm" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/testFiles/myNoError.asm">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="324">
+              <caret line="18" column="23" lean-forward="true" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="listing.lst" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/listing.lst">
+          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="198">
-              <caret line="16" column="29" lean-forward="true" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
+              <caret line="11" column="38" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -85,8 +64,8 @@
       <file leaf-file-name="LinesManager.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/main/LinesManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="274">
-              <caret line="30" column="13" lean-forward="true" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
+            <state relative-caret-position="252">
+              <caret line="30" column="43" lean-forward="false" selection-start-line="30" selection-start-column="43" selection-end-line="30" selection-end-column="43" />
               <folding />
             </state>
           </provider>
@@ -95,8 +74,18 @@
       <file leaf-file-name="PrintLst.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/PrintLst.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="19" column="26" lean-forward="false" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
+            <state relative-caret-position="234">
+              <caret line="18" column="30" lean-forward="false" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PrintWriter.java" pinned="false" current-in-tab="false">
+        <entry file="jar:///usr/lib/jvm/java-8-oracle/src.zip!/java/io/PrintWriter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="182" column="11" lean-forward="false" selection-start-line="182" selection-start-column="11" selection-end-line="182" selection-end-column="11" />
               <folding />
             </state>
           </provider>
@@ -167,7 +156,6 @@
         <option value="$PROJECT_DIR$/myError.asm" />
         <option value="$PROJECT_DIR$/src/com/company/main/lstGen/InstrSizeGen.java" />
         <option value="$PROJECT_DIR$/src/com/company/main/semanticAnalyzer/Semantic.java" />
-        <option value="$PROJECT_DIR$/src/com/company/main/LinesManager.java" />
         <option value="$PROJECT_DIR$/src/com/company/main/semanticAnalyzer/PrimaryFilters.java" />
         <option value="$PROJECT_DIR$/src/com/company/main/Line.java" />
         <option value="$PROJECT_DIR$/src/com/company/main/LineReader.java" />
@@ -175,7 +163,6 @@
         <option value="$PROJECT_DIR$/src/com/company/main/content/Content.java" />
         <option value="$PROJECT_DIR$/src/com/company/main/content/ContentType.java" />
         <option value="$PROJECT_DIR$/src/com/company/main/check/KeyWords.java" />
-        <option value="$PROJECT_DIR$/list.lst" />
         <option value="$PROJECT_DIR$/src/com/company/main/check/KeyWordMatch.java" />
         <option value="$PROJECT_DIR$/src/com/company/main/check/DirHandler.java" />
         <option value="$PROJECT_DIR$/src/com/company/main/content/LexemeOperandBuilder.java" />
@@ -188,7 +175,10 @@
         <option value="$PROJECT_DIR$/src/com/company/main/LineHandler.java" />
         <option value="$PROJECT_DIR$/src/com/company/PrintLst.java" />
         <option value="$PROJECT_DIR$/listing.lst" />
+        <option value="$PROJECT_DIR$/src/com/company/main/LinesManager.java" />
         <option value="$PROJECT_DIR$/src/com/company/Main.java" />
+        <option value="$PROJECT_DIR$/list.lst" />
+        <option value="$PROJECT_DIR$/testFiles/myNoError.asm" />
       </list>
     </option>
   </component>
@@ -223,6 +213,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="CompilerAsm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CompilerAsm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CompilerAsm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="testFiles" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -649,7 +653,21 @@
       <option name="project" value="LOCAL" />
       <updated>1500728274838</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Third Refactor">
+      <created>1500734954291</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1500734954291</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Release">
+      <created>1500736920906</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1500736920906</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -671,7 +689,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.12455934" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28038898" sideWeight="0.4795784" order="6" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18071313" sideWeight="0.4795784" order="6" side_tool="false" content_ui="combo" />
       <window_info id="Archetypes" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24959481" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -687,12 +705,17 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3278496" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.asm" />
+  </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Second refactor" />
-    <option name="LAST_COMMIT_MESSAGE" value="Second refactor" />
+    <MESSAGE value="Third Refactor" />
+    <MESSAGE value="Release" />
+    <option name="LAST_COMMIT_MESSAGE" value="Release" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -705,10 +728,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/test1Full.asm" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/src.zip!/java/util/LinkedList.java" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/src.zip!/java/lang/AbstractStringBuilder.java" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/src.zip!/java/lang/StringBuilder.java" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/src.zip!/java/lang/NumberFormatException.java" />
     <entry file="file://$PROJECT_DIR$/sentenceCheck.asm" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/src.zip!/java/util/List.java" />
@@ -881,7 +900,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/list.lst" />
     <entry file="file://$PROJECT_DIR$/src/com/company/main/Line.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-682">
@@ -923,22 +941,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/l.lst" />
-    <entry file="file://$PROJECT_DIR$/src/com/company/PrintLst.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="19" column="26" lean-forward="false" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/listing.lst">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/1.lst">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -955,18 +957,76 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar:///usr/lib/jvm/java-8-oracle/src.zip!/java/io/PrintWriter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="182" column="11" lean-forward="false" selection-start-line="182" selection-start-column="11" selection-end-line="182" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/PrintLst.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="18" column="30" lean-forward="false" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/main/LinesManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="30" column="13" lean-forward="true" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
+        <state relative-caret-position="252">
+          <caret line="30" column="43" lean-forward="false" selection-start-line="30" selection-start-column="43" selection-end-line="30" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dsfg.lst">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ls.list">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="22" column="69" lean-forward="false" selection-start-line="22" selection-start-column="69" selection-end-line="22" selection-end-column="69" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/list.lst">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="15" column="58" lean-forward="false" selection-start-line="15" selection-start-column="58" selection-end-line="15" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/listing.lst">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
-          <caret line="16" column="29" lean-forward="true" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
+          <caret line="11" column="38" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testFiles/myNoError.asm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="18" column="23" lean-forward="true" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
           <folding />
         </state>
       </provider>
