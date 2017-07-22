@@ -10,7 +10,8 @@ Compiler supports a small set of the x86 assembly commands.
 ![alt source](/materials/img/asm.png)
 #### Result (.lst)
 ![alt result](/materials/img/listing.png)
-###The orginal task is to implement the following assembly code (in Ukrainian):
+## Task
+The orginal task is to implement the following assembly code (in Ukrainian):
 
 ###### Ідентифікатори
 Містять великі і малі букви латинского алфавіту та цифри. Починаються з букви. 
