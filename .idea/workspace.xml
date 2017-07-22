@@ -1,0 +1,938 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="9a2d4a11-9025-4291-9adc-76d0b57f0d6f" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DOS-course/DosDrive/AFD.EXE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DOS-course/DosDrive/CourseW/TEST.LST" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DOS-course/DosDrive/LINK.EXE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DOS-course/DosDrive/Lab5/LAB5.EXE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DOS-course/DosDrive/Lab5/LAB5.LST" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DOS-course/DosDrive/Lab5/LAB5.OBJ" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DOS-course/DosDrive/Lab5/lab5.asm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DOS-course/DosDrive/Lab6/LAB6.EXE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DOS-course/DosDrive/Lab6/LAB6.LST" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DOS-course/DosDrive/Lab6/LAB6.OBJ" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DOS-course/DosDrive/MASM.EXE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DOS-course/SDL.dll" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DOS-course/SDL_net.dll" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DOS-course/capture/turbo_000.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DOS-course/capture/turbo_001.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DOS-course/capture/turbo_002.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DOS-course/capture/turbo_003.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DOS-course/dosbox.exe" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DOS-course/uninstall.exe" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DOS-course/zmbv/zmbv.dll" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/materials/Titulka.docx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/materials/errors/masmError.lst" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/materials/no errors/masmNoError.lst" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/CompilerAsm/com/company/Main.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/CompilerAsm/com/company/PrintLst.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/CompilerAsm/com/company/main/Line.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/CompilerAsm/com/company/main/LineHandler.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/CompilerAsm/com/company/main/LineReader.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/CompilerAsm/com/company/main/LinesManager.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/CompilerAsm/com/company/main/check/DirHandler.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/CompilerAsm/com/company/main/check/KeyWordMatch.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/CompilerAsm/com/company/main/check/KeyWords.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/CompilerAsm/com/company/main/content/Content.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/CompilerAsm/com/company/main/content/ContentType.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/CompilerAsm/com/company/main/content/Lexeme.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/CompilerAsm/com/company/main/content/LexemeOperand.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/CompilerAsm/com/company/main/content/LexemeOperandBuilder.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/CompilerAsm/com/company/main/lstGen/InstrSizeGen$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/CompilerAsm/com/company/main/lstGen/InstrSizeGen.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/CompilerAsm/com/company/main/lstGen/InstrSizeGen2.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/CompilerAsm/com/company/main/lstGen/OpCodeGenerator$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/CompilerAsm/com/company/main/lstGen/OpCodeGenerator.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/CompilerAsm/com/company/main/lstGen/RegTable.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/CompilerAsm/com/company/main/lstGen/Type.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/CompilerAsm/com/company/main/segmentTable/Segment.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/CompilerAsm/com/company/main/segmentTable/SegmentTable.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/CompilerAsm/com/company/main/semanticAnalyzer/Semantic.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/CompilerAsm/com/company/main/usrIdTable/Id.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/CompilerAsm/com/company/main/usrIdTable/UsrIdTable.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/description.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/project-template.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CompilerAsm.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DOS-course/AUTHORS.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DOS-course/COPYING.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DOS-course/DosDrive/CourseW/test.asm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DOS-course/DosDrive/KPK.MAP" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DOS-course/DosDrive/Lab6/lab6.asm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DOS-course/DosDrive/linkCom.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DOS-course/DosDrive/masmCom.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DOS-course/DosDrive/start.bat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DOS-course/INSTALL.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DOS-course/NEWS.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DOS-course/README.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DOS-course/THANKS.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DOS-course/dosbox.conf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DOS-course/mapper.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DOS-course/zmbv/README.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DOS-course/zmbv/zmbv.inf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/list.lst" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/masmError.asm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/masmNoError.asm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/materials/errors/masmError.asm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/materials/errors/myError.asm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/materials/errors/myError.lst" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/materials/no errors/masmNoError.asm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/materials/no errors/myNoError.asm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/materials/no errors/myNoError.lst" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myError.asm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myNoError.asm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/origTest.asm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/company/Main.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/company/PrintLst.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/company/main/Line.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/company/main/LineHandler.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/company/main/LineReader.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/company/main/LinesManager.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/company/main/check/DirHandler.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/company/main/check/KeyWordMatch.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/company/main/check/KeyWords.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/company/main/content/Content.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/company/main/content/ContentType.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/company/main/content/Lexeme.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/company/main/content/LexemeOperand.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/company/main/content/LexemeOperandBuilder.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/company/main/lstGen/InstrSizeGen.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/company/main/lstGen/InstrSizeGen2.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/company/main/lstGen/OpCodeGenerator.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/company/main/lstGen/RegTable.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/company/main/lstGen/Type.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/company/main/segmentTable/Segment.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/company/main/segmentTable/SegmentTable.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/company/main/semanticAnalyzer/Semantic.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/company/main/usrIdTable/Id.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/company/main/usrIdTable/UsrIdTable.java" />
+    </list>
+    <ignored path="$PROJECT_DIR$/out/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="324">
+              <caret line="21" column="2" lean-forward="true" selection-start-line="21" selection-start-column="2" selection-end-line="21" selection-end-column="2" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="myNoError.asm" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/myNoError.asm">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="30" column="26" lean-forward="true" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="KeyWordMatch.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/company/main/check/KeyWordMatch.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="327">
+              <caret line="90" column="6" lean-forward="false" selection-start-line="90" selection-start-column="6" selection-end-line="90" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>isFor</find>
+      <find>isF</find>
+      <find>DB_te</find>
+      <find>sub</find>
+      <find>DONE 32 2</find>
+      <find>lab2</find>
+      <find>System.out</find>
+      <find>Right id</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GradleLocalSettings">
+    <option name="externalProjectsViewState">
+      <projects_view />
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/com/company/main/Segment.java" />
+        <option value="$PROJECT_DIR$/src/com/company/main/RegexCheck.java" />
+        <option value="$PROJECT_DIR$/src/com/company/main/KeyWords.java" />
+        <option value="$PROJECT_DIR$/src/com/company/main/SegmentTable.java" />
+        <option value="$PROJECT_DIR$/src/com/company/main/Lines.java" />
+        <option value="$PROJECT_DIR$/src/com/company/main/LineReader.java" />
+        <option value="$PROJECT_DIR$/src/com/company/main/check/RegexCheck.java" />
+        <option value="$PROJECT_DIR$/src/com/company/main/check/Type.java" />
+        <option value="$PROJECT_DIR$/src/com/company/main/Content.java" />
+        <option value="$PROJECT_DIR$/src/com/company/main/content/Lexeme.java" />
+        <option value="$PROJECT_DIR$/src/com/company/main/content/ContentType.java" />
+        <option value="$PROJECT_DIR$/src/com/company/main/content/Content.java" />
+        <option value="$PROJECT_DIR$/test1Full.asm" />
+        <option value="$PROJECT_DIR$/sentejnceCheck" />
+        <option value="$PROJECT_DIR$/src/com/company/main/content/LexemeOperand.java" />
+        <option value="$PROJECT_DIR$/src/com/company/main/content/LexemeOperandBuilder.java" />
+        <option value="$PROJECT_DIR$/src/com/company/main/semanticAnalyzer/Semantic.java" />
+        <option value="$PROJECT_DIR$/src/com/company/main/Type.java" />
+        <option value="$PROJECT_DIR$/src/com/company/main/InstrSizeGen.java" />
+        <option value="$PROJECT_DIR$/src/com/company/main/lstGen/Type.java" />
+        <option value="$PROJECT_DIR$/src/com/company/main/check/KeyWords.java" />
+        <option value="$PROJECT_DIR$/src/com/company/main/lstGen/RegTable.java" />
+        <option value="$PROJECT_DIR$/src/com/company/main/Line.java" />
+        <option value="$PROJECT_DIR$/sentenceCheck.asm" />
+        <option value="$PROJECT_DIR$/src/com/company/main/lstGen/OpCodeGenerator.java" />
+        <option value="$PROJECT_DIR$/dataBack.asm" />
+        <option value="$PROJECT_DIR$/src/com/company/main/lstGen/InstrSizeGen.java" />
+        <option value="$PROJECT_DIR$/src/com/company/main/usrIdTable/UsrIdTable.java" />
+        <option value="$PROJECT_DIR$/src/com/company/main/usrIdTable/Id.java" />
+        <option value="$PROJECT_DIR$/src/com/company/main/segmentTable/Segment.java" />
+        <option value="$PROJECT_DIR$/src/com/company/main/segmentTable/SegmentTable.java" />
+        <option value="$PROJECT_DIR$/origTest.asm" />
+        <option value="$PROJECT_DIR$/src/com/company/main/lstGen/InstrSizeGen2.java" />
+        <option value="$PROJECT_DIR$/src/com/company/main/check/DirHandler.java" />
+        <option value="$PROJECT_DIR$/src/com/company/PrintLst.java" />
+        <option value="$PROJECT_DIR$/test.asm" />
+        <option value="$PROJECT_DIR$/test.lst" />
+        <option value="$PROJECT_DIR$/myNoError.asm" />
+        <option value="$PROJECT_DIR$/masmError.asm" />
+        <option value="$PROJECT_DIR$/myError.asm" />
+        <option value="$PROJECT_DIR$/src/com/company/main/LinesManager.java" />
+        <option value="$PROJECT_DIR$/src/com/company/main/LineHandler.java" />
+        <option value="$PROJECT_DIR$/src/com/company/Main.java" />
+        <option value="$PROJECT_DIR$/src/com/company/main/check/KeyWordMatch.java" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="y" value="24" />
+    <option name="width" value="1280" />
+    <option name="height" value="949" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CompilerAsm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CompilerAsm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CompilerAsm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CompilerAsm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="company" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CompilerAsm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CompilerAsm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="company" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CompilerAsm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CompilerAsm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="company" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="content" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CompilerAsm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CompilerAsm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="company" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="check" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.Main">
+    <configuration default="false" name="Main" type="Application" factoryName="Application" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" value="com.company.Main" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" value="" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="CompilerAsm" />
+      <envs />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android App">
+      <module name="" />
+      <option name="DEPLOY" value="true" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="DEBUGGER_TYPE" value="Java" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <Java />
+      <Profilers>
+        <option name="ENABLE_ADVANCED_PROFILING" value="true" />
+        <option name="GAPID_ENABLED" value="false" />
+        <option name="GAPID_DISABLE_PCS" value="false" />
+        <option name="SUPPORT_LIB_ENABLED" value="true" />
+        <option name="INSTRUMENTATION_ENABLED" value="true" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
+      <module name="" />
+      <option name="TESTING_TYPE" value="0" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="EXTRA_OPTIONS" value="" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="DEBUGGER_TYPE" value="Java" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <Java />
+      <Profilers>
+        <option name="ENABLE_ADVANCED_PROFILING" value="true" />
+        <option name="GAPID_ENABLED" value="false" />
+        <option name="GAPID_DISABLE_PCS" value="false" />
+        <option name="SUPPORT_LIB_ENABLED" value="true" />
+        <option name="INSTRUMENTATION_ENABLED" value="true" />
+      </Profilers>
+      <method />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list />
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <method />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="JarApplication" factoryName="JAR Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="Java Scratch" factoryName="Java Scratch">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="SCRATCH_FILE_ID" value="0" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="CompilerAsm" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="Application.Main" />
+    </list>
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9a2d4a11-9025-4291-9adc-76d0b57f0d6f" name="Default" comment="" />
+      <created>1495112725654</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1495112725654</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="24" width="1280" height="949" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32871974" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43598616" sideWeight="0.50323623" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23854288" sideWeight="0.49676377" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298731" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19854133" sideWeight="0.5" order="6" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3282532" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Archetypes" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39907727" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/src.zip!/java/io/BufferedReader.java" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/src.zip!/java/lang/CharSequence.java" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/src.zip!/java/lang/Object.java" />
+    <entry file="file://$PROJECT_DIR$/program.asm" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/src.zip!/java/util/regex/Pattern.java" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/src.zip!/java/util/regex/Matcher.java" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/src.zip!/java/lang/Integer.java" />
+    <entry file="file://$PROJECT_DIR$/src/sentenceCheck" />
+    <entry file="file://$PROJECT_DIR$/test1Full.asm" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/src.zip!/java/util/LinkedList.java" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/src.zip!/java/lang/AbstractStringBuilder.java" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/src.zip!/java/lang/StringBuilder.java" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/src.zip!/java/lang/NumberFormatException.java" />
+    <entry file="file://$PROJECT_DIR$/sentenceCheck.asm" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/src.zip!/java/util/List.java" />
+    <entry file="file://$PROJECT_DIR$/dataBack.asm" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/src.zip!/java/lang/String.java" />
+    <entry file="file://$PROJECT_DIR$/origTest.asm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1071">
+          <caret line="63" column="9" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="69" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/list1.lst" />
+    <entry file="file://$PROJECT_DIR$/test.lst" />
+    <entry file="file://$PROJECT_DIR$/masmNoError.asm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="69" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/masmError.asm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1044">
+          <caret line="58" column="3" lean-forward="false" selection-start-line="58" selection-start-column="3" selection-end-line="58" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myError.asm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/main/check/KeyWords.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="568">
+          <caret line="33" column="21" lean-forward="false" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/main/lstGen/OpCodeGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2837">
+          <caret line="150" column="13" lean-forward="false" selection-start-line="150" selection-start-column="12" selection-end-line="150" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/main/lstGen/Type.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="12" lean-forward="false" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/main/semanticAnalyzer/Semantic.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-483">
+          <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/main/usrIdTable/Id.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="424">
+          <caret line="40" column="17" lean-forward="false" selection-start-line="40" selection-start-column="16" selection-end-line="40" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/main/usrIdTable/UsrIdTable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="536">
+          <caret line="59" column="27" lean-forward="false" selection-start-line="59" selection-start-column="27" selection-end-line="59" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/main/Line.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-375">
+          <caret line="16" column="10" lean-forward="false" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/main/LineReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="309">
+          <caret line="18" column="19" lean-forward="false" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/main/content/Content.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="6" column="16" lean-forward="false" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/main/LineHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2747">
+          <caret line="25" column="23" lean-forward="false" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="23" />
+          <folding>
+            <element signature="e#746#747#0" expanded="false" />
+            <element signature="e#795#796#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/main/lstGen/InstrSizeGen2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="385">
+          <caret line="228" column="36" lean-forward="false" selection-start-line="228" selection-start-column="36" selection-end-line="228" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/main/content/Lexeme.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/main/content/ContentType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="9" lean-forward="false" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/main/content/LexemeOperandBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1800">
+          <caret line="110" column="34" lean-forward="false" selection-start-line="110" selection-start-column="34" selection-end-line="110" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/main/lstGen/InstrSizeGen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2772">
+          <caret line="167" column="34" lean-forward="false" selection-start-line="167" selection-start-column="34" selection-end-line="167" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-8-oracle/src.zip!/java/lang/String.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1535">
+          <caret line="2720" column="18" lean-forward="false" selection-start-line="2720" selection-start-column="18" selection-end-line="2720" selection-end-column="18" />
+          <folding>
+            <element signature="e#111196#111197#0" expanded="false" />
+            <element signature="e#111251#111252#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/main/lstGen/RegTable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="774">
+          <caret line="43" column="48" lean-forward="false" selection-start-line="43" selection-start-column="48" selection-end-line="43" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/main/segmentTable/Segment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="26" column="67" lean-forward="false" selection-start-line="26" selection-start-column="67" selection-end-line="26" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/main/segmentTable/SegmentTable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="44" column="19" lean-forward="false" selection-start-line="44" selection-start-column="19" selection-end-line="44" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/main/LinesManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="20" column="29" lean-forward="false" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/main/check/DirHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="229">
+          <caret line="325" column="9" lean-forward="false" selection-start-line="325" selection-start-column="9" selection-end-line="325" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/main/content/LexemeOperand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="11" column="19" lean-forward="false" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/PrintLst.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="790">
+          <caret line="53" column="42" lean-forward="false" selection-start-line="53" selection-start-column="42" selection-end-line="53" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lst.lst">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="24" column="45" lean-forward="false" selection-start-line="24" selection-start-column="45" selection-end-line="24" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myNoError.asm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="30" column="26" lean-forward="true" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/list.lst">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="56" column="0" lean-forward="false" selection-start-line="55" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="21" column="2" lean-forward="true" selection-start-line="21" selection-start-column="2" selection-end-line="21" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/main/check/KeyWordMatch.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="327">
+          <caret line="90" column="6" lean-forward="false" selection-start-line="90" selection-start-column="6" selection-end-line="90" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

@@ -1,0 +1,128 @@
+Microsoft (R) Macro Assembler Version 5.00                  6/15/17 10:25:20
+                                                             Page     1-1
+
+
+				.386 
+ 0000				DAT1 SEGMENT 
+ 0000  13				B1 DB 10011b 
+ 0001  0100				W1 DW 256 
+ 0003  00000000 U			D1 DD -a5A6FH 
+CourseW\test.asm(5): error A2009: Symbol not defined: A5A6FH
+ 0007  00080000				D2 DD 2048 
+ 000B  43 6F 75 72 73 65 20		B2 DB "Course work" 
+       77 6F 72 6B		
+ 0016  012C				W2 DW 300 
+ 0018  6F5A0000				D3 DD 5A6FH 
+ 001C  31 32 33 35			B3 DB "1235" 
+ 0020  00000000 R			labf dd lab5 
+ 0024  0000004D R			labb dd lab1 
+ 0028				DAT1 ENDS 
+				 
+ 0000				COD1 SEGMENT 
+				 
+					ASSUME CS:COD1, DS:DAT1 
+ 0000  9F				LAHF eax 
+CourseW\test.asm(18): warning A4001: Extra characters on line
+				 
+					SUB B2, byte ptr D1 
+CourseW\test.asm(20): error A2052: Improper operand type
+ 0001  2A 0D 0000000B R			SUB CL, B2 
+				 
+ 0007  67| 89 9E 0001			MOV 1 , EBX 
+CourseW\test.asm(23): error A2056: Immediate mode illegal
+ 000C  26: A0 00000018 R		MOV AL, byte ptr ES:D3 
+				 
+ 0012  26: 2B 05 00000018 R		SUB EAX,ES:D3 
+ 0019  26: 2A 2D 00000018 R		SUB CH, byte ptr ES:D3 
+				 
+				 
+ 0020  67| 66| 2B B6 0005 R		SUB BX, EBP+ESI*2 
+CourseW\test.asm(30): error A2049: Illegal use of register
+ 0026  2B 042D 00000000			SUB EAX,DS:[EBP*ESI] 
+CourseW\test.asm(31): error A2047: Multiple index registers
+				 
+ 002D  26: 39 1D 00000003 R		cmp ES:D1, EBX 
+ 0034  38 1D 0000000B R			cmp DS:B2, BL 
+				 
+					lab0 
+CourseW\test.asm(36): error A2105: Expected: instruction or directive
+ 003A  0F 8E 00000000 R				JNG B1 
+CourseW\test.asm(37): error A2045: Must be associated with code
+ 0040  0F 8E 00000018 R				JNG D3 
+CourseW\test.asm(38): error A2045: Must be associated with code
+					lab1: 
+CourseW\test.asm(39): error A2006: Phase error between passes
+				 
+ 004D  83 145F FD			ADC [edi+ebx*2], -3 
+CourseW\test.asm(41): error A2035: Operand must have size
+					 
+Microsoft (R) Macro Assembler Version 5.00                  6/15/17 10:25:20
+                                                             Page     1-2
+
+
+ 0051  0F AF CD				imul cl, ebp 
+CourseW\test.asm(43): error A2058: Byte register illegal
+ 0054  66| F7 E9			imul cs 
+CourseW\test.asm(44): error A2061: Improper use of segment register
+				 
+ 0057  81 25 00000003 R 020F0B01	AND D1,020F0B01H 
+ 0061  22 E1				AND AH, cl 
+				 
+ 0063  EA 00000016 ---- R		JMP far ptr W2 
+					cs: 
+CourseW\test.asm(50): warning A4016: Reserved word used as symbol: CS
+				 
+ 006A				COD1 ENDS 
+ 0000  8A C1				mov al, cl 
+CourseW\test.asm(53): error A2086: Data emitted with no segment
+ 0000				COD2 SEGMENT 
+				ASSUME CS:COD2 
+ 0000					lab5: ebx 
+CourseW\test.asm(56): error A2105: Expected: instruction or directive
+ 0000  FF 25 FFFFFFDC R			JMP -labb 
+CourseW\test.asm(57): error A2040: Operands must be in same segment, or one constant
+ 0006				COD2 ENDS 
+				END 
+Microsoft (R) Macro Assembler Version 5.00                  6/15/17 10:25:20
+                                                             Symbols-1
+
+
+
+
+                N a m e         	Size	Length	 Align	Combine Class
+
+COD1 . . . . . . . . . . . . . .  	32 Bit	006A	PARA	NONE	
+COD2 . . . . . . . . . . . . . .  	32 Bit	0006	PARA	NONE	
+DAT1 . . . . . . . . . . . . . .  	32 Bit	0028	PARA	NONE	
+
+Symbols:            
+
+                N a m e         	Type	 Value	 Attr
+
+B1 . . . . . . . . . . . . . . .  	L BYTE	0000	DAT1
+B2 . . . . . . . . . . . . . . .  	L BYTE	000B	DAT1
+B3 . . . . . . . . . . . . . . .  	L BYTE	001C	DAT1
+
+D1 . . . . . . . . . . . . . . .  	L DWORD	0003	DAT1
+D2 . . . . . . . . . . . . . . .  	L DWORD	0007	DAT1
+D3 . . . . . . . . . . . . . . .  	L DWORD	0018	DAT1
+
+LAB1 . . . . . . . . . . . . . .  	L NEAR	004D	COD1
+LAB5 . . . . . . . . . . . . . .  	L NEAR	0000	COD2
+LABB . . . . . . . . . . . . . .  	L DWORD	0024	DAT1
+LABF . . . . . . . . . . . . . .  	L DWORD	0020	DAT1
+
+W1 . . . . . . . . . . . . . . .  	L WORD	0001	DAT1
+W2 . . . . . . . . . . . . . . .  	L WORD	0016	DAT1
+
+@FILENAME  . . . . . . . . . . .  	TEXT  test		
+
+
+     59 Source  Lines
+     59 Total   Lines
+     17 Symbols
+
+  50974 + 467314 Bytes symbol space free
+
+      2 Warning Errors
+     15 Severe  Errors

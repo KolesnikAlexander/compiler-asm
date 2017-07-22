@@ -1,0 +1,80 @@
+0000                 DAT1 SEGMENT                            
+0000  13             	B1 DB 10011b                           
+0001  0100           	W1 DW 256                              
+0003                 	D1 DD -a5A6FH                          ERROR
+0003  00080000       	D2 DD 2048                             
+0007  436F7572736520776F726B	B2 DB "Course work"                    
+0012  012C           	W2 DW 300                              
+0014  6F5A0000       	D3 DD 5A6FH                            
+0018  31323335       	B3 DB "1235"                           
+001C  00000000 R     	labf dd lab5                           
+0020  00000021 R     	labb dd lab1                           
+0024                 DAT1 ENDS                               
+
+0000                 COD1 SEGMENT                            
+
+
+0000                 	LAHF eax                               ERROR
+
+0000                 	SUB B2, byte ptr D1                    ERROR
+0000  2A 0D 00000007 R	SUB CL, B2                             
+
+0006                 	MOV 1 , EBX                            ERROR
+0006                 	MOV AL, byte ptr ES:D3                 ERROR
+
+0006  26: 2B 05 00000014 R	SUB EAX,ES:D3                          
+000D  26: 2A 2D 00000014 R	SUB CH, byte ptr ES:D3                 
+
+
+0014                 	SUB BX, EBP+ESI*2                      ERROR
+0014                 	SUB EAX,DS:[EBP*ESI]                   ERROR
+
+0014                 	cmp ES:D1, EBX                         ERROR
+001B  38 1D 00000007 R	cmp DS:B2, BL                          
+
+0021                 	lab0                                   ERROR
+0021                 		JNG B1                                ERROR
+0021                 		JNG D3                                ERROR
+0021                 	lab1:                                  
+
+0021                 	ADC [edi+ebx*2], -3                    ERROR
+
+0021                 	imul cl, ebp                           
+0021                 	imul cs                                ERROR
+
+0021                 	AND D1,020F0B01H                       ERROR
+0021                 	AND AH, cl                             ERROR
+
+0021                 	JMP far ptr W2                         ERROR
+0028                 	cs:                                    ERROR
+
+0028                 COD1 ENDS                               
+0000                 	mov al, cl                             ERROR
+0000                 COD2 SEGMENT                            
+
+0000                 	lab5: ebx                              ERROR
+0000                 	JMP -labb                              ERROR
+0000                 COD2 ENDS                               
+0000                 END                                     
+
+           SEGMENT TABLE 
+DAT1  ..............   32 Bit   0024  PARA   NONE
+COD1  ..............   32 Bit   0028  PARA   NONE
+COD2  ..............   32 Bit   0000  PARA   NONE
+
+           USER IDENTIFIER TABLE 
+B1    ..............   L BYTE    0000  DAT1
+W1    ..............   L WORD    0001  DAT1
+D2    ..............   L DWORD   0003  DAT1
+B2    ..............   L BYTE    0007  DAT1
+W2    ..............   L WORD    0012  DAT1
+D3    ..............   L DWORD   0014  DAT1
+B3    ..............   L BYTE    0018  DAT1
+labf  ..............   L DWORD   001C  DAT1
+labb  ..............   L DWORD   0020  DAT1
+lab1  ..............   L NEAR    0021  COD1
+lab5  ..............   L NEAR    0000  COD2
+
+ERRORS: 20
+
+Created by Alexander Kolesnik, group: KV-51, 2017

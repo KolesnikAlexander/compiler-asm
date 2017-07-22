@@ -1,0 +1,263 @@
+Microsoft (R) Macro Assembler Version 5.00                  5/6/17 18:11:19
+                                                             Page     1-1
+
+
+				.386 
+				.186 
+ 0000				DATA1 SEGMENT PARA 
+ 0000  13				B1 DB 10011b 
+ 0001  0100				W1 DW 256 
+ 0003  6F5A0000				D1 DD 5A6FH 
+ 0007  00080000				D2 DD 2048 
+					 
+ 000B  012C				W2 DW 300 
+ 000D  6F5A0000				D3 DD 5A6FH 
+ 0011  31 32 33 35			B3 DB '1235' 
+ 0015  001E[				dvalue db 30 dup ('0',0fh) ;зарезервова
+				но 30 десяткових розрядів змінної dvalue 
+	   30			
+	   0F			
+			 ]	
+				
+					 
+ 0051  0005				len dw 5 
+ 0053  0003				row dw 3 
+ 0055  0007				col dw 7 
+				 
+ 0057  01				valadd db 1 ;значення, яке додається до
+				 dvalue 
+				 
+ 0058  FF				cont db 0ffh ;ознака продовження роботи
+				 
+ 0059				DATA1 ENDS 
+				 
+ 0000				STACK1 SEGMENT STACK 
+ 0000  0100[				DB 256 DUP ('?') 
+	   3F			
+			 ]	
+				
+ 0100				STACK1 ENDS 
+				 
+ 0000				CODE1 SEGMENT 
+					ASSUME CS:CODE1, DS:DATA1 
+				 
+ 0000				MAIN PROC FAR 
+ 0000  B8 ---- R			mov ax,Data1             
+ 0003  8E D8			    mov ds,ax 
+					;Инициализация драйвера мыши 
+ 0005  B8 0000				MOV AX, 00H ;Использовать драйвер мыши 
+ 0008  CD 33				INT 33H 
+				 
+ 000A  B8 000C				MOV AX, 0CH; Установить функцию-обработ
+				чик 
+ 000D  B9 000A				MOV CX, 1010b; событие - нажатие л.клав
+				. или пр. клав. 
+				 
+ 0010  06				push ES ;зберегти вміст сегментного рег
+				істра 
+ 0011  0E				push CS 
+Microsoft (R) Macro Assembler Version 5.00                  5/6/17 18:11:19
+                                                             Page     1-2
+
+
+ 0012  07				pop ES ; вважаєм, що процедура користув
+				ача 
+ 0013  8D 16 008F R			lea dx, MOUSE_HANDLER; встановити зміще
+				ння процедури 
+ 0017  CD 33				INT 33H 
+				 
+ 0019  B4 00				mov ah, 00H  ;установка видеорнежима 
+ 001B  B0 03				mov al, 03H  ;Цветной текстовый режим 
+ 001D  CD 10				INT 10H	 
+				 
+ 001F  B8 0001				MOV AX, 01H ;Показать указатель 
+ 0022  CD 33				INT 33H 
+ 0024				@write: ; відображення dvalue 
+ 0024  BB B800				MOV BX, 0b800h ;начальный адрес видеобу
+				фера 
+ 0027  8E C3				MOV ES, BX 
+					сli ; заборона переривань, щоб мишка "н
+				е мішала" 
+Lab5\lab5.asm(55): warning A4001: Extra characters on line
+ 0029  BE 0015 R			mov si,offset dvalue 
+ 002C  B0 00				mov al, 0; byte ptr row ; обчислення Nr
+				ow ?80?2 + Ncolumn ? 2 
+ 002E  B4 00				mov ah,0 
+ 0030  BB 00A0				MOV BX, 160 
+ 0033  B9 0001				MOV CX, 1 
+ 0036					start_loop: 
+ 0036  3B CB					CMP CX, BX 
+ 0038  7F 09					jg end_loop 
+ 003A  03 06 0053 R				add ax, byte ptr row 
+Lab5\lab5.asm(64): warning A4031: Operand types must match
+ 003E  83 C1 01					add CX, 1 
+ 0041  EB F3					jmp start_loop 
+ 0043					end_loop: 
+ 0043  03 06 0055 R			add ax,col 
+ 0047  03 06 0055 R			add ax,col ; завершення обчислення 
+ 004B  8B F8				mov di,ax 
+ 004D  8B 0E 0051 R			mov cx,len 
+ 0051  FC				cld 
+ 0052  F3/ A5				rep movsw ;виведення на екран 
+ 0054  FB				sti ;переривання дозволяються 
+ 0055				@9: ; додавання чергового значення : 
+ 0055  8B 36 0051 R			mov si,len 
+ 0059  D1 E6				shl si,1 
+ 005B  83 EE 02				sub si,2 ;визначення адреси молодшої ци
+				фри dvalue 
+ 005E  B4 00				mov ah,0 ;початкове значення перенесенн
+				я в старший 
+							;десятковий розряд 
+ 0060  8A 84 0015 R			mov al, dvalue[si] 
+ 0064  02 06 0057 R			add al,valadd 
+ 0068  37				aaa ;корекція при додаванні розпаковани
+				х 
+							;двійково-десяткових чи
+				сел 
+Microsoft (R) Macro Assembler Version 5.00                  5/6/17 18:11:19
+                                                             Page     1-3
+
+
+ 0069  0C 30				or al,30h ;формування коду ASCII десятк
+				ової цифри 
+ 006B  88 84 0015 R			mov dvalue[si],al 
+ 006F				@10: 
+ 006F  4E				dec si 
+ 0070  4E				dec si 
+ 0071  8A C4				mov al,ah 
+ 0073  B4 00				mov ah,0 
+ 0075  02 84 0015 R			add al,dvalue[si] ;додавання перенесенн
+				я 
+ 0079  37				aaa 
+ 007A  0C 30				or al,30h 
+ 007C  88 84 0015 R			mov dvalue[si],al 
+ 0080  83 FE 00				cmp si,0 
+ 0083  75 EA				jnz @10 
+ 0085  A0 0058 R			mov al,cont ;аналіз ознаки продовження 
+				роботи програми 
+ 0088  3C FF				cmp al,0ffh 
+ 008A  74 98				je @write 
+ 008C  E8 00C6 R			CALL EXIT 
+ 008F				MAIN ENDP  
+				 
+ 008F				MOUSE_HANDLER PROC FAR 
+ 008F  B8 0003				MOV AX, 03H ; получить текущее положени
+				е указателя 
+ 0092  CD 33				INT 33H 
+ 0094  8B C3				MOV AX, BX ; регистры с информацией 
+					 
+ 0096  83 E3 0B				CHECK_LEFT: AND BX, 11 ; проверка нажат
+				ия левой клавиши 
+ 0099  83 FB 01							CMP BX, 01 
+ 009C  75 0F							jne CHECK_RIGHT
+				 
+ 009E  83 3E 0051 R 02						CMP len, 2 
+ 00A3  74 0B							je R 
+ 00A5  83 2E 0051 R 01						sub len, 1 
+ 00AA  EB 04 90							jmp R 
+ 00AD					CHECK_RIGHT: ;нажата правая клавиша 
+ 00AD  E8 00C6 R			CALL EXIT 
+ 00B0				R: 
+ 00B0  B8 0003			mov ax, 03 ;очистка экрана 
+ 00B3  CD 10			int 10h 
+ 00B5  CB			RET 
+ 00B6				MOUSE_HANDLER ENDP 
+				 
+ 00B6				CLEAR PROC NEAR 
+ 00B6  60				PUSHA 
+ 00B7  B8 0600				MOV AX, 0600H 
+ 00BA  B7 07				MOV BH, 07 
+ 00BC  B9 0000				MOV CX, 0000 
+ 00BF  BA 184F				MOV DX, 184FH 
+ 00C2  CD 10				INT 10H 
+ 00C4  61				POPA 
+ 00C5  C3				RET 
+Microsoft (R) Macro Assembler Version 5.00                  5/6/17 18:11:19
+                                                             Page     1-4
+
+
+ 00C6				CLEAR ENDP 
+				 
+ 00C6				EXIT PROC NEAR 
+ 00C6  33 C9				xor cx,cx ;cx=0 
+ 00C8  B8 000C				mov ax,0ch 
+ 00CB  CD 33				int 33h ;процедура prmaus далі викликат
+				ись не буде 
+				 
+ 00CD  B8 0003				mov ax, 03 ;очистка экрана 
+ 00D0  CD 10				int 10h 
+				 
+ 00D2  07				POP ES 
+				 
+ 00D3  B8 4C00				MOV AX, 4C00H 
+ 00D6  CD 21				INT 21H 
+ 00D8				EXIT ENDP 
+				 
+ 00D8				CODE1 ENDS 
+				END MAIN 
+Microsoft (R) Macro Assembler Version 5.00                  5/6/17 18:11:19
+                                                             Symbols-1
+
+
+
+
+                N a m e         	Size	Length	 Align	Combine Class
+
+CODE1  . . . . . . . . . . . . .  	16 Bit	00D8	PARA	NONE	
+DATA1  . . . . . . . . . . . . .  	16 Bit	0059	PARA	NONE	
+STACK1 . . . . . . . . . . . . .  	16 Bit	0100	PARA	STACK	
+
+Symbols:            
+
+                N a m e         	Type	 Value	 Attr
+
+B1 . . . . . . . . . . . . . . .  	L BYTE	0000	DATA1
+B3 . . . . . . . . . . . . . . .  	L BYTE	0011	DATA1
+
+CHECK_LEFT . . . . . . . . . . .  	L NEAR	0096	CODE1
+CHECK_RIGHT  . . . . . . . . . .  	L NEAR	00AD	CODE1
+CLEAR  . . . . . . . . . . . . .  	N PROC	00B6	CODE1	Length = 0010
+COL  . . . . . . . . . . . . . .  	L WORD	0055	DATA1
+CONT . . . . . . . . . . . . . .  	L BYTE	0058	DATA1
+
+D1 . . . . . . . . . . . . . . .  	L DWORD	0003	DATA1
+D2 . . . . . . . . . . . . . . .  	L DWORD	0007	DATA1
+D3 . . . . . . . . . . . . . . .  	L DWORD	000D	DATA1
+DVALUE . . . . . . . . . . . . .  	L BYTE	0015	DATA1	Length = 001E
+
+END_LOOP . . . . . . . . . . . .  	L NEAR	0043	CODE1
+EXIT . . . . . . . . . . . . . .  	N PROC	00C6	CODE1	Length = 0012
+
+LEN  . . . . . . . . . . . . . .  	L WORD	0051	DATA1
+
+MAIN . . . . . . . . . . . . . .  	F PROC	0000	CODE1	Length = 008F
+MOUSE_HANDLER  . . . . . . . . .  	F PROC	008F	CODE1	Length = 0027
+
+R  . . . . . . . . . . . . . . .  	L NEAR	00B0	CODE1
+ROW  . . . . . . . . . . . . . .  	L WORD	0053	DATA1
+
+START_LOOP . . . . . . . . . . .  	L NEAR	0036	CODE1
+
+VALADD . . . . . . . . . . . . .  	L BYTE	0057	DATA1
+
+W1 . . . . . . . . . . . . . . .  	L WORD	0001	DATA1
+W2 . . . . . . . . . . . . . . .  	L WORD	000B	DATA1
+
+@10  . . . . . . . . . . . . . .  	L NEAR	006F	CODE1
+@9 . . . . . . . . . . . . . . .  	L NEAR	0055	CODE1
+@FILENAME  . . . . . . . . . . .  	TEXT  lab5		
+@WRITE . . . . . . . . . . . . .  	L NEAR	0024	CODE1
+
+Microsoft (R) Macro Assembler Version 5.00                  5/6/17 18:11:19
+                                                             Symbols-2
+
+
+
+    150 Source  Lines
+    150 Total   Lines
+     30 Symbols
+
+  51032 + 467256 Bytes symbol space free
+
+      2 Warning Errors
+      0 Severe  Errors
