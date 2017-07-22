@@ -8,9 +8,10 @@ import java.io.PrintWriter;
 import java.util.LinkedList;
 
 /**
- * Created by alex6 on 12.06.2017.
+ * Printing the listing to the file
  */
 public class PrintLst {
+
     public static void print(String lstPath, LinkedList<Line> lines){
         int errorCounter = 0;
         PrintWriter writer = null;
@@ -37,10 +38,7 @@ public class PrintLst {
                 errorCounter++;
                 writer.print("ERROR");
             }
-
-
             writer.println();
-
         }
         writer.println();
         writer.print(LinesManager.segmentTable.toListing());

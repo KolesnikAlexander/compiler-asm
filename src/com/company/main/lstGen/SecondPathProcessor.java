@@ -1,8 +1,5 @@
 package com.company.main.lstGen;
 
-/**
- * Created by alex6 on 12.06.2017.
- */
 
 import com.company.main.Line;
 import com.company.main.LinesManager;
@@ -46,13 +43,9 @@ public class SecondPathProcessor {
                 line.setListing(lst + " R");
                 return;
             }
-            /**
-             * TO DO
-             */
             unsuportedInstr(line);
             return;
         }
-
         if (op1.isDirectAddress() && !LinesManager.usrIdTable.contains(op1.getDirectAdressValue())) {
             line.assignError();
             return;
@@ -61,7 +54,6 @@ public class SecondPathProcessor {
             line.assignError();
             return;
         }
-
         if (contentType == ContentType.MNEM_OP) {
             if (mnem.toUpperCase().equals("JMP")) {
                 if (op1.isFarPtr()){
@@ -73,9 +65,6 @@ public class SecondPathProcessor {
                         }
                     }
                 }
-                /**
-                 * TO DO
-                 */
                 if (usrIdTable.contains(op1.getDirectAdressValue())) {
                     Id id = usrIdTable.getIdByName(op1.getDirectAdressValue());
                     if (id.getType().equals("L DWORD")) {
@@ -101,9 +90,6 @@ public class SecondPathProcessor {
                 }
             }
             if (mnem.toUpperCase().equals("JNG")) {
-                /**
-                 * TO DO
-                 */
                 if (usrIdTable.contains(op1.getDirectAdressValue())){
                     Id id = usrIdTable.getIdByName(op1.getDirectAdressValue());
                     if (id.getType().equals("L NEAR")){
@@ -128,21 +114,15 @@ public class SecondPathProcessor {
             return;
         }
         if (contentType == ContentType.MNEM_OP_OP) {
-            /**
-             * SUB REG_MEM
-             */
+            //SUB REG_MEM
             if (mnem.toUpperCase().equals("SUB")) {
-                /**
-                 * DIRECT ADDRESS
-                 */
+                //DIRECT ADDRESS
                 if (op1.isRegister8() && op2.isDirectAddress()) {
                     sub_reg8_dirAddr(line, op1.getRegister8Value(), op2.getDirectAdressValue());
                 } else if (op1.isRegister32() && op2.isDirectAddress()) {
                     sub_reg32_dirAddr(line, op1.getRegister32Value(), op2.getDirectAdressValue());
                 }
-                /**
-                 * BASE INDEX MULTIPLIER DONE
-                 */
+                //BASE INDEX MULTIPLIER DONE
                 else {
                     unsuportedInstr(line);
                     return;
@@ -151,17 +131,13 @@ public class SecondPathProcessor {
                 return;
             }
             if (mnem.toUpperCase().equals("CMP")) {
-                /**
-                 * DIRECT ADDRESS
-                 */
+                //DIRECT ADDRESS
                 if (op2.isRegister8() && op1.isDirectAddress()) {
                     cmp_dirAddr_reg8(line, op2.getRegister8Value(), op1.getDirectAdressValue());
                 } else if (op2.isRegister32() && op1.isDirectAddress()) {
                     cmp_dirAddr_reg32(line, op2.getRegister32Value(), op1.getDirectAdressValue());
                 }
-                /**
-                 * BASE INDEX MULTIPLIER DONE
-                 */
+                //BASE INDEX MULTIPLIER DONE
                 else {
                     unsuportedInstr(line);
                     return;

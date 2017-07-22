@@ -1,11 +1,11 @@
 package com.company.main.content;
 
 /**
- * Created by alex6 on 05.06.2017.
+ * Content of the line: type of the content, command, operands, label.
  */
 public class Content {
     ContentType contentType;
-    String assistField; //label in sentence etc.
+    String assistField; //label in sentence, etc.
     String mnem;
     LexemeOperand op1;
     LexemeOperand op2;

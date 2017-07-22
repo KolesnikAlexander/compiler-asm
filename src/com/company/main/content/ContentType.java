@@ -16,7 +16,6 @@ public enum ContentType {
     MNEM,
     MNEM_OP,
     MNEM_OP_OP,
-
     LAHF,
     SUB,
     MOV,

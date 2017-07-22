@@ -34,7 +34,6 @@ public class LinesManager {
             System.out.println("File not found");
             return;
         }
-
         Line curLine;
         try {
             while ((curLine = reader.read()) != null){ //first pass
@@ -66,7 +65,6 @@ public class LinesManager {
             System.out.println("Cannot read from file");
             return;
         }
-
     }
     private static boolean end(Line curLine){
         return KeyWordMatch.isEnd(curLine.getString());

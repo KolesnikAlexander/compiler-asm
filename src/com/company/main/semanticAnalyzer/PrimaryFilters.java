@@ -15,7 +15,7 @@ import static com.company.main.LinesManager.usrIdTable;
 
 /**
  * Contains primary filters for preventing the lines that are
- * clearly wrong from the following processing.
+ * definitely wrong from the following processing.
  */
 public class PrimaryFilters {
     private static ContentType contentType;
@@ -51,10 +51,16 @@ public class PrimaryFilters {
         return true;
     }
 
+    /**
+     * @return true if the first operand is a constant
+     */
     private static boolean isFirstOpConst() {
         return op1.isConstant() || op1.isTextConstant();
     }
 
+    /**
+     * @return true if the current operation is memory-memory
+     */
     private static boolean isMemMem() {
         return ((op1.isDirectAddress()||op1.isBaseIndexMultiplier())&&
                 (op2.isDirectAddress()||op2.isBaseIndexMultiplier()));

@@ -1,7 +1,6 @@
 package com.company.main.check;
 
 import com.company.main.Line;
-import com.company.main.lstGen.Type;
 import com.company.main.content.Content;
 import com.company.main.content.ContentType;
 import com.company.main.content.LexemeOperand;
@@ -17,18 +16,13 @@ import static com.company.main.LinesManager.*;
 import static com.company.main.check.KeyWords.*;
 
 /**
- * Created by alex6 on 18.05.2017.
+ * Builds a <code>Content</code> table for the line.
  */
 public class DirHandler {
-    public static void segmentStartHandler(Line line){
 
-    }
-    public static void assignError(Line line){
-        line.setError(true);
-    }
     public static void defineHandler(Line line){
         if(KeyWordMatch.isDB(line.getString())){
-            if (textConst(line.getString())){
+            if (KeyWordMatch.textConst(line.getString())){
                 dBTextHandler(line);
                 return;
             }
@@ -38,7 +32,6 @@ public class DirHandler {
                 return;
             }
             dBHandler(line, decimal);
-
             return;
         }
         if(KeyWordMatch.isDW(line.getString())){
@@ -48,14 +41,12 @@ public class DirHandler {
                 return;
             }
             dWHandler(line, decimal);
-
             return;
         }
         if(KeyWordMatch.isDD(line.getString())){
             String label = parseLabelVal(line.getString());
             if(label != null){
                dDLabelHandler(line, label);
-
                return;
            }
             long decimal = constToDecimal(line.getString());
@@ -64,7 +55,6 @@ public class DirHandler {
                 return;
             }
             dDHandler(line, decimal);
-
             return;
         }
         line.assignError();
@@ -79,102 +69,27 @@ public class DirHandler {
             number = matcher.group(2);
         }
         else{
-            //EXCEPTION
+            //NOP
         }
-        if (decConst(number)){
+        if (KeyWordMatch.decConst(number)){
             if ((number.charAt(number.length()-1) == 'd')||(number.charAt(number.length()-1) == 'D'))
                 return Long.parseLong(number.substring(0,number.length()-1));
             else
                 return Long.parseLong(number);
-            //convert to Decimal
         }
-        if (hexConst(number)){
+        if (KeyWordMatch.hexConst(number)){
             number = number.substring(0, number.length()-1);
             Long value = Long.parseLong(number, 16);
-            //convert to Decimal
             return value;
         }
-        if (binConst(number)){
+        if (KeyWordMatch.binConst(number)){
             number = number.substring(0, number.length()-1);
             Long value = Long.parseLong(number, 2);
-            //convert to Decimal
             return value;
         }
         return 0; //ERROR
-        //throw new Exception("Wrong format of the constant");
     }
 
-
-    private static int convertConst(final String string, Type type){
-        String number = new String(string);
-        boolean positive;
-        int result = 0;
-
-        if(number.charAt(0) == '-'){
-            positive = false;
-            number = number.substring(1, number.length());
-        }
-        else
-            positive = true;
-
-        char lastChar = number.charAt(number.length()-1);
-        if ((lastChar == 'b')||(lastChar == 'B')){
-            number = number.substring(0, number.length()-1);
-            result = Integer.parseInt(number,2);
-        }
-        else
-            result = -1; // <------------------------------------- Change
-        if (!positive){
-            // Turn result to additional code
-        }
-        return result;
-
-    }
-    private static boolean textConst(String number) {
-        if (number == null){ //<--------------------- DELETE
-            return true;
-        }
-        Pattern usrIdPattern = Pattern.compile("^\\s*"+ USR_ID+"\\s+("+DEF_DIR+")\\s+("+TEXT_CONST+")\\s*$",
-                Pattern.CASE_INSENSITIVE);
-        return  usrIdPattern.matcher(number).find();
-
-    }
-    public static boolean binConst(String number) {
-        if (number == null){ //<--------------------- DELETE
-            return true;
-        }
-        Pattern usrIdPattern = Pattern.compile("^"+BIN_CONST+"$",
-                Pattern.CASE_INSENSITIVE);
-        return  usrIdPattern.matcher(number).find();
-
-    }
-
-    public static boolean hexConst(String number) {
-        if (number == null){//<--------------------- DELETE
-            return true;
-        }
-        Pattern usrIdPattern = Pattern.compile("^"+HEX_CONST+"$",
-                Pattern.CASE_INSENSITIVE);
-        return  usrIdPattern.matcher(number).find();
-    }
-
-    public static boolean decConst(String number) {
-        String res = null;
-        if (number == null){//<--------------------- DELETE
-            return true;
-        }
-        Pattern usrIdPattern = Pattern.compile("^("+DEC_CONST+")$",
-                Pattern.CASE_INSENSITIVE);
-        return  usrIdPattern.matcher(number).find();
-    }
-    private static boolean checkPositive(String number) {
-        Pattern usrIdPattern = Pattern.compile("^-.*$",
-                Pattern.CASE_INSENSITIVE);
-        Matcher matcher =  usrIdPattern.matcher(number);
-        while (matcher.find()){
-        }
-        return true;
-    }
     private static String parseId(String string){
         Pattern usrIdPattern = Pattern.compile("^\\s*("+USR_ID+")\\s+("+DEF_DIR+").*$",
                 Pattern.CASE_INSENSITIVE);
@@ -212,7 +127,7 @@ public class DirHandler {
             else {
                 String text = parseText(line.getString());
                 usrIdTable.addId(name,"L BYTE",commonOffset,curSegment);
-                text = toHex(text);//<-------------------------------------------CONVERTION TO HEX
+                text = toHex(text);//CONVERTION TO HEX
                 line.content = new Content(ContentType.DB_TEXT, text, null, null,null);//assistant field is text
                 return;
             }
@@ -221,8 +136,6 @@ public class DirHandler {
     public static String toHex(String arg) {
         return String.format("%x", new BigInteger(1, arg.getBytes(/*YOUR_CHARSET?*/)));
     }
-
-
     private static void dBHandler(Line line, long number){
        String name = parseId(line.getString());
         if (usrIdTable.nameIsForbidden(name)){
@@ -309,14 +222,12 @@ public class DirHandler {
         }
     }
     private static LexemeOperand createLexemeOperand(String operand) {
-
         return LexemeOperandBuilder.buildLexemeOperand(operand);
     }
     public static boolean labelHandler(Line line, String label) {
         if(idIsAllowed(label)){
             usrIdTable.addId(label,"L NEAR",commonOffset,curSegment);
-            //line.content = new Content(ContentType.NOTHING, label, null, null, null);//assistant field is a name of label
-           if (line.content.getContentType() == null)
+            if (line.content.getContentType() == null)
                 line.content.setContentType(ContentType.NOTHING);
             line.content.setAssistField(label);
             return true;
@@ -336,9 +247,6 @@ public class DirHandler {
         line.content.setOp1(createLexemeOperand(operand)); //operand has right syntax
         return true;
     }
-
-
-
     public static boolean mnemOperOperHandler(Line line, String mnem, String operand1, String operand2) {
         line.content.setContentType(ContentType.MNEM_OP_OP);
         line.content.setMnem(mnem);

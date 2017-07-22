@@ -7,14 +7,9 @@ import static com.company.main.check.KeyWords.*;
 
 
 /**
- * Created by alex6 on 18.05.2017.
+ * Check for a keywords match using regular expressions.
  */
 public class KeyWordMatch {
-    /**
-     * Checks whether it's a segment start pattern
-     * @param string
-     * @return
-     */
     public static boolean isEmpty(String string) {
         Pattern usrIdPattern = Pattern.compile("^\\s*$",
                 Pattern.CASE_INSENSITIVE);
@@ -105,6 +100,7 @@ public class KeyWordMatch {
         else
             return false;
     }
+
     public static boolean isEnd(String string) {
         Pattern usrIdPattern = Pattern.compile("^\\s*END\\s*$",
                 Pattern.CASE_INSENSITIVE);
@@ -116,4 +112,40 @@ public class KeyWordMatch {
             return false;
     }
 
+    static boolean textConst(String number) {
+        if (number == null){
+            return true;
+        }
+        Pattern usrIdPattern = Pattern.compile("^\\s*"+ USR_ID+"\\s+("+DEF_DIR+")\\s+("+TEXT_CONST+")\\s*$",
+                Pattern.CASE_INSENSITIVE);
+        return  usrIdPattern.matcher(number).find();
+    }
+
+    public static boolean binConst(String number) {
+        if (number == null){
+            return true;
+        }
+        Pattern usrIdPattern = Pattern.compile("^"+BIN_CONST+"$",
+                Pattern.CASE_INSENSITIVE);
+        return  usrIdPattern.matcher(number).find();
+    }
+
+    public static boolean hexConst(String number) {
+        if (number == null){
+            return true;
+        }
+        Pattern usrIdPattern = Pattern.compile("^"+HEX_CONST+"$",
+                Pattern.CASE_INSENSITIVE);
+        return  usrIdPattern.matcher(number).find();
+    }
+
+    public static boolean decConst(String number) {
+        String res = null;
+        if (number == null){
+            return true;
+        }
+        Pattern usrIdPattern = Pattern.compile("^("+DEC_CONST+")$",
+                Pattern.CASE_INSENSITIVE);
+        return  usrIdPattern.matcher(number).find();
+    }
 }

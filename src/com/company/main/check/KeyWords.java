@@ -1,8 +1,6 @@
 package com.company.main.check;
 
-/**
- * Created by alex6 on 18.05.2017.
- */
+
 public class KeyWords {
     public static String MNEM = "LAHF|SUB|MOV|CMP|ADC|IMUL|AND|JNG|JMP";
     public static String REG_8 = "al|bl|cl|dl|ah|bh|ch|dh";
@@ -17,22 +15,12 @@ public class KeyWords {
     public static String BIN_CONST = "\\-?[01]+b?";
     public static String HEX_CONST = "\\-?[0-9][a-f0-9]*h";
     public static String TEXT_CONST = "\".*\"";
-
     public static String PTR_PRED = "BYTE|WORD|DWORD|FAR";
     public static String PTR = "PTR";
 
     public static String CONSTANT = DEC_CONST +"|"+BIN_CONST+"|"+HEX_CONST+"|"+TEXT_CONST;
     public static String CONST_XPT_TEXT = DEC_CONST +"|"+BIN_CONST+"|"+HEX_CONST;
-
-    public static String allKeyWords = MNEM +"|"+ REG_8 +"|"+ REG_32 + "|"+DEF_DIR+"|"+
-            REG_SEG + "|"+USR_ID + "|"+ SEGMENT_DIR +"|"+ ENDS_DIR;
     public static String RESERVED_WORDS = MNEM +"|"+ REG_8 +"|"+ REG_32 +"|"+ DEF_DIR+"|"+
             REG_SEG  +"|"+ SEGMENT_DIR +"|"+ENDS_DIR;
-
-
-    /**
-     * Register table
-     */
-
 
 }

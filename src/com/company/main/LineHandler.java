@@ -14,14 +14,11 @@ import static com.company.main.check.DirHandler.idIsAllowed;
 import static com.company.main.check.KeyWords.*;
 
 /**
- * Created by alex6 on 18.05.2017.
- *
  * Checks what keywords the line contains and calls functions
  * from <code>DirHandler</code> class to set the <code>Content</code>
  * table for the line.
  */
 public class LineHandler {
-
     public static String curSegment = null;
     private static String str;
     public static Line curLine;
@@ -30,7 +27,6 @@ public class LineHandler {
     public static void incCommonOffset(int val){
         commonOffset = commonOffset + val;
     }
-
 
     public static void handle(Line line){
         curLine = line;
@@ -72,6 +68,7 @@ public class LineHandler {
         else
             return false;
     }
+
     private static boolean labelExpression() {
         Pattern usrIdPattern = Pattern.compile("^\\s*("+USR_ID+")\\s*:(.*)$",
                 Pattern.CASE_INSENSITIVE);
@@ -120,8 +117,6 @@ public class LineHandler {
             return false;
     }
 
-
-
     private static boolean labelMnem() {
         return false;
     }
@@ -152,7 +147,6 @@ public class LineHandler {
            return false;
     }
 
-    //<------------- check for wrong names (name of the segment is a keyword)
     private static boolean checkSEGMENTAndENDS(Line line) {
         String str = line.getString();
         //SEGMENT found
@@ -168,11 +162,9 @@ public class LineHandler {
                     segmentTable.addSegment(segmentName); // <------- move to Dir Handler
                     line.content = new Content(ContentType.SEGMENT, null,null, null, null);
                 }
-
             }
             else // SEGMENT found inside other segment
                 line.assignError();
-
             return true;
         }
 
@@ -197,8 +189,6 @@ public class LineHandler {
                 return true;
             }
         }
-
         return false;
     }
-
 }

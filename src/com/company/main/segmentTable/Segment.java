@@ -1,8 +1,5 @@
 package com.company.main.segmentTable;
 
-/**
- * Created by alex6 on 18.05.2017.
- */
 public class Segment {
         private String name;
         private String size;
@@ -38,11 +35,6 @@ public class Segment {
 
         @Override
         public String toString() {
-//            return name +"  .......   " +
-//                    size + "   "+
-//                    length+"  "+
-//                    align+"   "+
-//                    combClass + "\n";
             String hexLength =
                     String.format("%"+4+"s", Integer.toHexString(length).toUpperCase())
                             .replace(' ', '0');

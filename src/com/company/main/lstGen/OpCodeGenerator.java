@@ -8,9 +8,7 @@ import static com.company.main.LineHandler.incCommonOffset;
 import static com.company.main.LinesManager.usrIdTable;
 import static com.company.main.lstGen.RegTable.*;
 
-/**
- * Created by alex6 on 10.06.2017.
- */
+
 public class OpCodeGenerator {
     public static void lahf(Line line){
         line.setListing("9F");
@@ -284,16 +282,6 @@ public class OpCodeGenerator {
             case DOUBLE: numOfCharacters = 8;
         }
         result = String.format("%"+numOfCharacters+"s", result).replace(' ', '0');
-/*
-        if (type == Type.DOUBLE){ //Special format for double
-            char reversed[] = new char[8];
-            for (int i = 0; i < 4; i++){
-                reversed[numOfCharacters - 2*i - 2] =  result.charAt(2*i);
-                reversed[numOfCharacters - 2*i - 1] =  result.charAt(2*i + 1);
-            }
-            result = String.valueOf(reversed);
-        }
-        */
         return  result;
     }
 
@@ -342,5 +330,4 @@ public class OpCodeGenerator {
         else
             return false;
     }
-
 }

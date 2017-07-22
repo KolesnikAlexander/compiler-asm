@@ -5,23 +5,18 @@ import com.company.main.check.DirHandler;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import static com.company.main.check.DirHandler.binConst;
-import static com.company.main.check.DirHandler.decConst;
-import static com.company.main.check.DirHandler.hexConst;
+import static com.company.main.check.KeyWordMatch.binConst;
+import static com.company.main.check.KeyWordMatch.decConst;
+import static com.company.main.check.KeyWordMatch.hexConst;
 import static com.company.main.check.KeyWords.*;
 import static com.company.main.check.KeyWords.REG_32;
 import static com.company.main.check.KeyWords.REG_8;
 
-/**
- * Created by alex6 on 07.06.2017.
- */
+
 public class LexemeOperandBuilder {
 
     public static LexemeOperand buildLexemeOperand(String operand) {
-
         LexemeOperand lexemeOperand = null;
-
-
         Pattern pattern;
         Matcher matcher;
 
@@ -71,7 +66,6 @@ public class LexemeOperandBuilder {
             lexemeOperand.setConstant(true);
             lexemeOperand.setConstantValue(number);
             return lexemeOperand;
-
         }
         if (hexConst(number)){
             number = number.substring(0, number.length()-1);
@@ -81,7 +75,6 @@ public class LexemeOperandBuilder {
             lexemeOperand.setConstant(true);
             lexemeOperand.setConstantValue(decValue);
             return lexemeOperand;
-
         }
         if (binConst(number)){
             number = number.substring(0, number.length()-1);
@@ -91,7 +84,6 @@ public class LexemeOperandBuilder {
             lexemeOperand.setConstant(true);
             lexemeOperand.setConstantValue(decValue);
             return lexemeOperand;
-
         }
 
 
@@ -113,7 +105,6 @@ public class LexemeOperandBuilder {
             return lexemeOperand;
         } else
             return null;
-
     }
 
     private static LexemeOperand reg32(String operand) {
@@ -129,7 +120,6 @@ public class LexemeOperandBuilder {
             return lexemeOperand;
         } else
             return null;
-
     }
 
     private static LexemeOperand directAdders(String operand) {
@@ -165,7 +155,6 @@ public class LexemeOperandBuilder {
             return lexemeOperand;
         } else
             return null;
-
     }
     private static LexemeOperand baseIndexMult(String operand) {
         LexemeOperand lexemeOperand = new LexemeOperand();
@@ -191,7 +180,6 @@ public class LexemeOperandBuilder {
             lexemeOperand.setMultiplier(true);
             lexemeOperand.setMultiplierValue(matcher.group(5));
 
-
             if (matcher.group(1)!=null){
                 if (matcher.group(1).toUpperCase().equals("BYTE"))
                     lexemeOperand.setBytePtr(true);
@@ -209,6 +197,5 @@ public class LexemeOperandBuilder {
             return lexemeOperand;
         } else
             return null;
-
     }
 }

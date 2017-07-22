@@ -84,9 +84,6 @@ public class FirstPathProcessor {
             line.assignDone();
             return;
         }
-        /**
-         * -> Second path consideration: DD_LABEL
-         */
         if (contentType == ContentType.MNEM) {
             /**
              *LAHF
@@ -101,14 +98,7 @@ public class FirstPathProcessor {
             }
 
         }
-        /**
-         * IMUL, JMP, JNG
-         * -> Second path consideration: JMP, JNG
-         */
         if (contentType == ContentType.MNEM_OP) {
-            /**
-             * IMUL REG8/REG32
-             */
             if (mnem.toUpperCase().equals("IMUL")) {
                 if (op1.isRegister8()) {
                     imul_reg8(line, op1.getRegister8Value());
@@ -133,14 +123,9 @@ public class FirstPathProcessor {
                 }
                 if (op1.isFarPtr()){
                     incCommonOffset(7);
-                    /**
-                     * TO DO
-                     */
                     return;
                 }
-                /**
-                 * Short jump
-                 */
+                // short jump
                 if (usrIdTable.contains(op1.getDirectAdressValue())){
                     Id id = usrIdTable.getIdByName(op1.getDirectAdressValue());
                     if (id.getType().equals("L NEAR")){
@@ -167,8 +152,6 @@ public class FirstPathProcessor {
                     incCommonOffset(6);
                     return;
                 }
-
-
             }
             else if (mnem.toUpperCase().equals("JNG")) {
                 if(op1.isSegChange() ||
@@ -200,15 +183,12 @@ public class FirstPathProcessor {
                     incCommonOffset(6);
                     return;
                 }
-
             }
             unsuportedInstr(line);
             return;
         }
-        /**
-         * SUB, MOV, CMP, ADC, AND
-         * -> Second path consideration: SUB, CMP, ADC
-         */
+
+         //SUB, MOV, CMP, ADC, AND
         if (contentType == ContentType.MNEM_OP_OP) {
 
             if (mnem.toUpperCase().equals("MOV")) {
@@ -271,9 +251,9 @@ public class FirstPathProcessor {
                 line.assignDone();
                 return;
             }
-            /** SUB REG_MEM*/
+            //SUB REG_MEM
             if (mnem.toUpperCase().equals("SUB")) {
-                    /** DIRECT ADDRESS*/
+                    //DIRECT ADDRESS
                     if ((op1.isRegister8() || op1.isRegister32()) && op2.isDirectAddress()) {
                         incCommonOffset(6);
                         if (op2.isSegChange() && !(op2.getSegChangeValue().toUpperCase().equals("DS"))){
@@ -281,7 +261,7 @@ public class FirstPathProcessor {
                         }
                         return; // done is false !
                     }
-                    /** BASE INDEX MULTIPLIER*/
+                   // BASE INDEX MULTIPLIER
                     else if ((op1.isRegister8()||op1.isRegister32()) && op2.isBaseIndexMultiplier()) {
                         if(op2.getReg2Value().toUpperCase().equals("ESP")){
                             unsuportedInstr(line);
@@ -299,7 +279,7 @@ public class FirstPathProcessor {
                     }
             }
             if (mnem.toUpperCase().equals("CMP")) {
-                /** DIRECT ADDRESS*/
+                //DIRECT ADDRESS
                 if ((op2.isRegister8() || op2.isRegister32()) && op1.isDirectAddress()) {
                     incCommonOffset(6);
                     if (op1.isSegChange() && !(op1.getSegChangeValue().toUpperCase().equals("DS"))){
@@ -307,7 +287,7 @@ public class FirstPathProcessor {
                     }
                     return; // done is false !
                 }
-                /** BASE INDEX MULTIPLIER*/
+                //BASE INDEX MULTIPLIER
                 else if ((op2.isRegister8()||op2.isRegister32()) && op1.isBaseIndexMultiplier()) {
                     if(op1.getReg2Value().toUpperCase().equals("ESP")){
                         unsuportedInstr(line);
@@ -367,10 +347,6 @@ public class FirstPathProcessor {
             }
         }
     }
-//
-
-
-    ///
 
     public static boolean imm32isOk(String constantValue) {
         Long decimal = Long.parseLong(constantValue);
@@ -395,15 +371,8 @@ public class FirstPathProcessor {
         return false;
     }
 
-    //CREATE SPLITTING BY BYTES FOR BEAUTIFUL OUTPUT!!!
+    //CREATE SPLITTING BY BYTES FOR A BEAUTIFUL OUTPUT!!!
     private static String splitByBytes(String noSpacesString) {
-      /*  String str1 = new StringBuilder(noSpacesString).insert(noSpacesString.length()-2, ".").toString();
-        StringBuilder str = new StringBuilder(noSpacesString);
-        for (int i = 2; i < noSpacesString.length()/2 - 1; i+=2){
-
-        }
-
-    */
       return noSpacesString;
     }
     /**
@@ -447,6 +416,4 @@ public class FirstPathProcessor {
         }
         return  result;
     }
-
-
 }

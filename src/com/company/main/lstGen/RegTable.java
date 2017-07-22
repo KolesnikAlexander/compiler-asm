@@ -1,9 +1,5 @@
 package com.company.main.lstGen;
 
-/**
- * Created by alex6 on 10.06.2017.
- */
-
 import java.util.Hashtable;
 
 /**
@@ -44,6 +40,4 @@ public class RegTable {
         return registers.get(new String(reg.toUpperCase()));
 
     }
-
-
 }

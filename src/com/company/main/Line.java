@@ -3,7 +3,9 @@ package com.company.main;
 import com.company.main.content.Content;
 
 /**
- * Created by alex6 on 18.05.2017.
+ * Representation of a line in the assembly file inside the compiler.
+ * It contains all the information about the line that is contributed and read
+ * by many modules.
  */
 public class Line {
     private String string;
@@ -28,7 +30,6 @@ public class Line {
         listing = new String();
         this.output = new String();
     }
-
     @Override
     public String toString() {
         return "Line{" +
@@ -42,7 +43,6 @@ public class Line {
                 ",      Listing:" + listing + "\n" +
                 '}'+"\n";
     }
-
     public boolean isDone() {
         return done;
     }
