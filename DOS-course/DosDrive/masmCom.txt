@@ -1,4 +1,0 @@
-CourseW\test.asm
-CourseW\test.obj
-CourseW\test.lst
-
